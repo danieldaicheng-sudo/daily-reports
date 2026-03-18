@@ -23,8 +23,12 @@
 1. 检查 workspace 是否有未提交的变更
 2. 添加 memory/ 目录下的日报文件到 git staging
 3. 提交变更（commit message: "daily: YYYY-MM-DD 工作日报"）
-4. 推送到 GitHub 远程仓库
-5. 如遇冲突或推送失败，记录到日志待人工处理
+4. 推送到 GitHub 远程仓库 origin master
+5. 如遇冲突或推送失败，尝试强制推送（git push --force），如仍失败则记录到日志待人工处理
+
+**前置条件检查**：
+- 确保 git remote origin 已配置为 https://github.com/danieldaicheng-sudo/daily-reports.git
+- 确保分支为 master（或根据实际情况调整为 main）
 
 ### 任务3：周六工作周报（18:00）
 **触发条件**：每周六 18:00
